@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVEN PONTUS ML WEB APPLIKATION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">    
+</head>
+<body>
+    {% block body %}
+    <div>
+        <!-- Labels -->
+        <h1 class="text-label-1-welcome">SVEN PONTUS ML Web Application!</h1>
+        <h1 class="text-label-2">Train a scikitlearn model from your csv</h1>
+        <h1 class="text-label-3">Load up your csv file and lets start train your model</h1>
+        
+        <!-- Classification or Regression -->
+        <button id="classification-btn" class="almost-all-buttons">Classification</button>
+        <button id="regression-btn" class="almost-all-buttons">Regression</button>
+        <form id="csv-upload-form" method="post" enctype="multipart/form-data">            
+        <div class="file-container">
+            <input type="file" id="csvFile" name="csvFile" accept=".csv" class="file-input">
+            <!-- Buttons top -->            
+            <label for="csvFile" class="almost-all-buttons file-label">FIND CSV FILE</label>
+        </div>
+        <button class="almost-all-buttons">LOAD CSV</button>
+        <button class="almost-all-buttons" type="button" id="show-button">SHOW COLUMN NAMES</button>        
+        <div class="flex-container">
+            <!-- left field -->            
+            <div class="background-container-left">
+                <h1 class="text-label-4">CSV Basics</h1>
+                <div id="filename-display"></div> <!--filename -->                 
+            </div>
+            <!-- field in the middle -->
+            <div class="background-container">
+                <p id="upload-success-message" style="display:none;">CSV file uploaded successfully!</p>
+                <div id="df-show"></div>
+                <p id="loading-message" style="display:none;"></p>   
+            </div>
+            <!-- right field --> 
+            <div class="background-container-right">
+                <h1 class="text-label-5">Best Model</h1> 
+                <div id="best-model-r2-score"></div>
+                </div>
+        </div>
+        <!-- Buttons under -->
+        <div id="target-selection-container" style="position: fixed; bottom: 0; width: 100%; text-align: center;">
+            <input type="number" id="target-number" class="almost-all-buttons" placeholder="ENTER A NUMBER" style="margin-top: 20px; margin-bottom: 0;">
+            <button class="almost-all-buttons" type="button" id="choose-target-button">CHOOSE TARGET & TRAIN MODEL</button>
+            <button class="almost-all-buttons" type="button" id="see-report-button">SEE REPORT</button>
+            <!-- dumpmodel button -->
+            <button class="almost-all-buttons" type="button" id="dump-best-model-button">DUMP BEST MODEL</button>
+            <div id="report-section" style="color: white; margin-top: 20px;"></div>
+            
+        </div> 
+    </div>
+    <footer> 
+        <p id="YPP">&copy; 2024 YYP</p>
+    </footer>
+    {% endblock %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+

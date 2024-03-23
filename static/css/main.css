@@ -1,0 +1,178 @@
+body {
+    /*background*/
+    background-color:  rgb(187, 187, 187);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-attachment: fixed;
+    text-align: center;
+}
+/* All buttons except find csv file and dumo model button */
+.almost-all-buttons {
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 8px; 
+    transition-duration: 0.4s; 
+}
+/* When you pick your mouse over the button*/
+.almost-all-buttons:hover {
+    /*font-size: 18px;*/
+    background-color: rgba(255, 255, 255, 0.701); 
+    color: rgb(0, 0, 0); 
+}
+.text-label-1-welcome {
+    font-size: 70px;
+    color: rgb(255, 253, 230);
+    /*transform: skew(2deg);*/
+    letter-spacing: 10px;
+    /* Shadow */  
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9); 
+    margin-bottom: 8px;
+}
+/* Trix with label 2 */
+@keyframes expand {
+    0% {
+        text-shadow: -1px -5px 10px rgba(157, 0, 131, 0.653), 5px 5px 3px rgba(51, 6, 252, 0.653);
+        transform: scale(0.1);
+    }
+    100% {
+        text-shadow: -1px -1px 1px rgb(170, 13, 13), 1px 2px 1px rgb(4, 163, 41);
+        transform: scale(1);
+    }
+}
+
+.text-label-2 {
+    font-size: 55px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    text-shadow: -1px -1px 1px rgb(170, 13, 13), 1px 2px 1px rgb(4, 163, 41);
+    margin-top: 0px;
+    margin-bottom: -6px;
+    animation: expand 2s ease-in-out forwards; /* Use 'forwards' to keep the state at the end of the animation */
+}
+
+.text-label-3 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px; 
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+/* The text from df and so on, in the box of the middle of screen*/
+#df-show {
+    color: black; 
+    font-size: 20px; 
+    white-space: pre-wrap; 
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin-top: 20px; 
+    padding: 10px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+     
+}
+
+
+.file-container {
+    position: relative;
+    display: inline-block;
+}
+/* Find csv file*/
+.file-input {
+    display: none; 
+}
+/* Find csv file button */
+.file-label {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 4px 2px;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+/* Find csv file hover */
+.file-label:hover {
+    background-color: rgba(255, 255, 255, 0.701); 
+    color: rgb(0, 0, 0); 
+}
+.text-label-4 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px; 
+    text-shadow: 2px 2px 2px rgb(0, 0, 0),7px 7px 7px rgb(0, 0, 0);
+    margin-top: -10px; 
+}
+/* Grey text field holder, the box in to the left */
+.background-container-left {
+    background-color: rgba(238, 238, 238, 0.859); 
+    padding: 20px;
+    border-radius: 8px;
+    width: 170px; 
+    height: 335px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column; 
+    margin: 1px auto; 
+}
+/* Grey text field holder, the big box in the middle */
+.background-container {
+    background-color: rgba(238, 238, 238, 0.859); 
+    padding: 20px;
+    border-radius: 8px;
+    width: 550px; /* Bredden satt till 300px */
+    height: 335px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column; 
+    margin: 1px auto; 
+}
+.text-label-5 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px; 
+    text-shadow: 2px 2px 2px rgb(0, 0, 0),7px 7px 7px rgb(0, 0, 0);
+    margin-top: -10px; 
+}
+/* Grey text field holder, the box in to the right */
+.background-container-right {
+    background-color: rgba(238, 238, 238, 0.859); 
+    padding: 20px;
+    border-radius: 8px;
+    width: 170px; 
+    height: 335px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column; 
+    margin: 1px auto; 
+}
+/* CSV file name css*/
+#filename-display {
+    color: black; 
+    font-size: 16px;
+    padding-top: 13px; 
+    text-align: left;
+}
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: start; 
+    gap: 20px; 
+}
+
+/* Dump botten */
+#dump-best-model-button {
+    position: absolute;
+    right: 85px; 
+    bottom: 20px; 
+}
