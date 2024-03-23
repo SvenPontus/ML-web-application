@@ -1,6 +1,6 @@
 # ML-web-application
 
-This application enables ML operations from a small school assignment. 
+This application enables ML operations from a school assignment. 
 The primary objective is to load a CSV file and create various models for both 
 classification and regression tasks. It features both a Flask version for web 
 application use and a terminal UI. Although the program contains some bugs and 
